@@ -1,0 +1,14 @@
+---
+name: K6 Git Comments
+description: Publishes comments on Git PR displaying K6 Test Results
+inputs:
+  version-type:
+    description: Provide version type [major, minor, patch]
+    required: true
+    default: patch
+outputs:
+  new-version:
+    description: Incremented version based on the input
+runs:
+  using: node12
+  main: action/index.js
